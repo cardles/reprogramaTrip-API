@@ -27,17 +27,55 @@ Vamos fazer o CRUD obsevando as demandas de negócio :point_down:
 Use o espaço abaixo para organizar as urls e respectivas ações do CRUD, relacionando com as demandas de negócio.<br />
 
 ## Em aula
+
+REFERENTE À VIAGENS:
 - ver todas as viagens disponíveis<br />
+{GET}/travels
+const getAllTravels
 
 - pesquisar uma viagem por id<br />
+{GET}/travels/:id
+const getTravelById
 
+
+REFERENTE À PASSAGEIROS
 - cadastrar novo passageiro em uma viagem enviando apenas nome, email e id da viagem<br />
+{POST}/travels/:id/passenger/create
+const createPeople
+
+dados esperados:
+   {
+        "id": auto,
+        "name": String,
+        "email": String,
+        "documentNumber": String,
+        "travelId": String
+    }
 
 - deletar um passageiro do sistema<br />
+{DELETE}/passenger/:id/delete
+const deletePeople
+
+dados esperados:
+   {
+        "name": String,
+        "email": String,
+        "documentNumber": String,
+        "travelId": String
+    }
 
 - atualizar um passageiro no sistema<br />
+{PUT}/passenger/:id/update
+const updatePeople
 
 - editar nome do passageiro no sistema<br />
+{PATCH}/passenger/:id/updateName
+const updateName
+
+dados esperados:
+   {
+        "name": String,
+    }
  
 
 ### Para Casa
